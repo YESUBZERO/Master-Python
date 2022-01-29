@@ -5,7 +5,7 @@
 
 Hay muchas razones para usar Python: puede compilar muchos tipos diferentes de programas con él, es relativamente fácil de usar, tiene un ecosistema enriquecido y mucho más.
 
-   # Puede compilar muchos tipos de programas.
+   #### Puede compilar muchos tipos de programas.
    El lenguaje de programación Python permite compilar muchos tipos de programas, como los siguientes:
         Aplicaciones empresariales para capturar, analizar y procesar datos.
         Aplicaciones web dinámicas a las que puede acceder un explorador web.
