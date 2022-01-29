@@ -8,7 +8,40 @@ podemos crear nuestros modulos.
 """
 
 # importar mi propio modulo
+import imp
 import modulo
 
 print(modulo.holamundo("Miguel"))
+print("-----------------------------------------------")
+
+
+# Modulo fechas
+import datetime
+print(datetime.date.today())
+
+fecha_completa = datetime.datetime.now()
+print(fecha_completa)
+print(fecha_completa.year)
+print(fecha_completa.time())
+
+fecha_personalizada = fecha_completa.strftime("%d/%m/%Y, %H:%M") #! formateando fecha
+print(f"Fecha Personalizada: {fecha_personalizada}")
+print("-----------------------------------------------")
+
+
+# Modulo de matematica
+import math
+
+print("Raiz Cuadrada de 10: ", math.sqrt(10))
+print("NUmero PI: ", math.pi)
+print("Redondear: ", math.ceil(6.56789))
+print("-----------------------------------------------")
+
+
+# Modulo Randon
+import random
+
+print(f"Numro Aleatorio 15 - 67: {random.randint(15, 67)}")
+
+
 
