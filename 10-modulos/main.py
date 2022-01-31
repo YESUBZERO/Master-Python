@@ -8,7 +8,6 @@ podemos crear nuestros modulos.
 """
 
 # importar mi propio modulo
-import imp
 import modulo
 
 print(modulo.holamundo("Miguel"))
