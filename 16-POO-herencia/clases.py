@@ -1,12 +1,6 @@
 # HERENCIA: Es la posibilidad de compartir atributos y metodos entre clases
 # y que diferentes clases hereden de otras.
 
-from mailbox import NoSuchMailboxError
-from msilib.schema import Class
-
-from cv2 import rectify3Collinear
-
-
 class persona:
     """
     nombres
