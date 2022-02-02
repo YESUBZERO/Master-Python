@@ -65,4 +65,13 @@ class Informatico(persona):
 
     def repararPC(self):
         return "He reparado tu ordenador..."
-   
+
+class tecnicoRedes(Informatico):
+
+    def __init__(self):
+        super().__init__()              #! Esta linea llama al constructor de la clase padre informatico, para usar sus atributos.
+        self.auditarRedes = "Experto"
+        self.experienciaRedes = 15
+
+    def auditar(self):
+        return "Estoy auditando una red..."
