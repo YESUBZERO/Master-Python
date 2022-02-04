@@ -32,6 +32,7 @@ conexion.commit()                                                   #! commit me
 
 # Borrar datos
 #cursor.execute("DELETE FROM productos")   
+#conexion.commit()
 
 
 # Insertat muchos registros
@@ -41,12 +42,16 @@ productos = [
     ("Motherboard", "Buena motherboard", 200),
     ("tablet", "Buena tablet", 400),
 ]
-cursor.executemany("INSERT INTO productos VALUES (null,?,?,?)", productos)
-conexion.commit()
+#cursor.executemany("INSERT INTO productos VALUES (null,?,?,?)", productos)
+#conexion.commit()
+
+
+# Update
+cursor.execute("UPDATE productos SET precio=300 WHERE precio=400")  #! UPDATE para actualizar un campo
 
 
 # Listar o leer datos
-cursor.execute("SELECT * FROM productos;")
+cursor.execute("SELECT * FROM productos WHERE precio >= 300;")
 productos = cursor.fetchall()
 
 for producto in productos:
