@@ -38,4 +38,16 @@ class Usuario:
         
 
     def identificar(self):
-        self.nombre
+        # Consulta para comprobar que existe el usuario
+        sql = "SELECT * FROM usuarios WHERE email = %s AND password = %s"
+
+        # Cifrar contraseña
+        cifrado = hashlib.sha256()
+        cifrado.update(self.password.encode('utf8')) # Encode me permite convertir a bte mi string
+
+        usuario = (self.email, cifrado.hexdigest())
+
+        cursor.execute(sql, usuario)
+        result = cursor.fetchone()
+
+        return result
